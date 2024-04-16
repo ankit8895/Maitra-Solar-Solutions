@@ -8,55 +8,63 @@ import {
   Typography,
   Input,
   Button,
+  Textarea,
+  Checkbox,
 } from '@material-tailwind/react';
 
 const Contact = () => {
   return (
     <Section>
-      <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-4 lg:mt-8 h-[32rem]'>
-        <div className='max-h-96 w-full flex flex-col justify-between p-4 gap-4 lg:gap-0'>
-          <Typography variant='h5' className='text-center text-2xl md:text-4xl'>
+      <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-32 lg:gap-4 lg:mt-4 h-[32rem]'>
+        <div className='flex flex-col items-center lg:items-start justify-evenly px-2 md:px-6 lg:pl-6 gap-4 text-justify'>
+          <Typography variant='h5' className=' text-2xl md:text-4xl'>
             Ready to go solar?
           </Typography>
           <Typography
             variant='paragraph'
-            className='text-center lg:text-start text-[8px] md:text-lg lg:text-2xl'
+            className='text-justify text-lg lg:mt-14'
           >
             By clicking "Get A Free Solar Estimate", I consent to join the email
             list and receive SMS from Maitra Solar solutions, with access to our
             latest offers and services. Message a data rates may apply. Message
-            frequency varies. More details on this are in our Privacy Policy and
-            Terms of Service.
+            frequency varies. More details on this are in our{' '}
+            <span className='underline decoration-2 cursor-pointer'>
+              Privacy Policy
+            </span>{' '}
+            and{' '}
+            <span className='underline decoration-2 cursor-pointer'>
+              Terms of Service
+            </span>
+            .
           </Typography>
-          <Typography
-            variant='paragraph'
-            className='text-center text-[8px] md:text-lg lg:text-2xl'
-          >
+          <Typography variant='paragraph' className='text-lg'>
             Text "HELP" for help or contact us at +91-8446853660.
           </Typography>
         </div>
-        <div className='h-full w-full'>
-          <Card className='w-full'>
+
+        <div className='flex justify-center items-center'>
+          <Card className='md:w-96'>
             <CardHeader
               variant='gradient'
               color='gray'
-              className='mb-4 grid h-28 place-items-center'
+              className='grid h-28 place-items-center'
             >
               <Typography variant='h3' color='white'>
                 Contact
               </Typography>
             </CardHeader>
-            <CardBody className='flex flex-col gap-4'>
+            <CardBody className='flex flex-col gap-2'>
+              <Input label='Name' size='lg' />
               <Input label='Email' size='lg' />
-              <Input label='Password' size='lg' />
               <Input label='Subject' size='lg' />
-              <Input label='Message' size='md' />
-            </CardBody>
-            <CardFooter className='pt-0'>
+              <Textarea label='Message' />
+              <div className='-ml-2.5'>
+                <Checkbox label='Terms of Service and Privacy Policy' />
+              </div>
               <Button variant='gradient' fullWidth>
                 Get a Free Solar Estimate
               </Button>
-            </CardFooter>
+            </CardBody>
           </Card>
         </div>
       </div>
