@@ -12,33 +12,81 @@ import {
   Checkbox,
 } from '@material-tailwind/react';
 
+import Modal from '../components/Modal';
+
 const Contact = () => {
   return (
     <Section>
-      <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-32 lg:gap-4 lg:mt-4 h-[32rem]'>
-        <div className='flex flex-col items-center lg:items-start justify-evenly px-2 md:px-6 lg:pl-6 gap-4 text-justify'>
+      <div className='grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-20 lg:gap-4 lg:mt-4 h-[32rem]'>
+        <div className='flex flex-col items-start justify-evenly px-2 md:px-6 lg:pl-6'>
           <Typography variant='h5' className=' text-2xl md:text-4xl'>
             Ready to go solar?
           </Typography>
           <Typography
             variant='paragraph'
-            className='text-justify text-lg lg:mt-14'
+            className='text-xs md:text-lg lg:text-base text-justify mt-4'
           >
             By clicking "Get A Free Solar Estimate", I consent to join the email
             list and receive SMS from Maitra Solar solutions, with access to our
             latest offers and services. Message a data rates may apply. Message
             frequency varies. More details on this are in our{' '}
-            <span className='underline decoration-2 cursor-pointer'>
+            <span className='underline underline-offset-4 font-semibold cursor-pointer'>
               Privacy Policy
             </span>{' '}
             and{' '}
-            <span className='underline decoration-2 cursor-pointer'>
+            <span className='underline underline-offset-4 font-semibold cursor-pointer'>
               Terms of Service
             </span>
             .
           </Typography>
-          <Typography variant='paragraph' className='text-lg'>
-            Text "HELP" for help or contact us at +91-8446853660.
+          <Typography as='div'>
+            <Typography as='div' className='flex flex-row gap-4 my-4 lg:mb-4'>
+              <Modal Modalfor='whatsapp'>
+                <img
+                  src='./assets/images/whatsapp.png'
+                  alt='whatsapp'
+                  className='h-6 md:h-10'
+                />
+              </Modal>
+              <Modal>
+                <img
+                  src='./assets/images/linkedin.png'
+                  alt='linkedin'
+                  className='h-6 md:h-10'
+                />
+              </Modal>
+              <Modal Modalfor='telephone'>
+                <img
+                  src='./assets/images/telephone.png'
+                  alt='telephone'
+                  className='h-6 md:h-10'
+                />
+              </Modal>
+            </Typography>
+            <Typography
+              variant='paragraph'
+              className='text-xs md:text-lg lg:text-base'
+            >
+              Based in Pune, Maharashtra
+            </Typography>
+            <Typography
+              variant='paragraph'
+              className='text-xs md:text-lg lg:text-base'
+            >
+              Email:{' '}
+              <span className='underline underline-offset-4 font-semibold cursor-pointer'>
+                info@maitrasolarsolutions.in
+              </span>
+            </Typography>
+            <Typography
+              variant='paragraph'
+              className='text-xs md:text-lg lg:text-base'
+            >
+              To join our team, contact us at{' '}
+              <span className='underline underline-offset-4 font-semibold cursor-pointer'>
+                hr@maitrasolarsolutions.in
+              </span>
+            </Typography>
           </Typography>
         </div>
 

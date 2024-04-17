@@ -7,18 +7,16 @@ import {
   CardHeader,
 } from '@material-tailwind/react';
 
-import aboutImage from '../assets/images/about.png';
-
 const About = () => {
   return (
     <Section>
       <div className='flex flex-col md:items-center lg:flex-row gap-4 p-2 md:p-4'>
         <Card className='w-full md:w-3/5'>
-          <CardHeader floated={false} className='h-80 bg-[#a1b1c7]'>
+          <CardHeader floated={false} className='h-80 bg-[#a1b1c7] relative'>
             <img
-              src={aboutImage}
+              src='./assets/images/about.png'
               alt='profile-picture'
-              className='bg-[#a1b1c7]'
+              className='bg-[#a1b1c7] absolute md:right-28'
             />
           </CardHeader>
           <CardBody className='text-center'>
@@ -51,7 +49,7 @@ const About = () => {
             corporations.
           </Typography>
           <Typography variant='h5' className='text-center'>
-            "अशक्यं प्रकृतः ऋते जीवनम ्"
+            "अशक्यं प्रकृतः ऋते जीवनम"
           </Typography>
           <Typography
             variant='h5'

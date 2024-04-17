@@ -1,9 +1,6 @@
 import React from 'react';
 import Section from '../components/Section';
 
-import portfolio1 from '../assets/images/portfolio1.png';
-import portfolio2 from '../assets/images/portfolio2.jpg';
-
 import { Typography } from '@material-tailwind/react';
 
 const Portfolio = () => {
@@ -14,7 +11,7 @@ const Portfolio = () => {
           <div className='h-[16rem] md:h-[32rem] lg:h-[16rem]'>
             <img
               className='h-full w-full object-cover object-center'
-              src={portfolio1}
+              src='./assets/images/portfolio1.png'
               alt='image1'
             />
           </div>
@@ -177,7 +174,7 @@ const Portfolio = () => {
           <div className='h-[16rem] md:h-[32rem] lg:h-[16rem]'>
             <img
               className='h-full w-full object-cover object-left lg:object-center'
-              src={portfolio2}
+              src='./assets/images/portfolio2.jpg'
               alt='image2'
             />
           </div>

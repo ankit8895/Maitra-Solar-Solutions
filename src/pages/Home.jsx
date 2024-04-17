@@ -1,25 +1,21 @@
 import React, { useState } from 'react';
 import Section from '../components/Section';
-import hero1 from '../assets/images/hero1.jpg';
-import hero2 from '../assets/images/hero2.jpg';
-import hero3 from '../assets/images/hero3.jpg';
 
 import { Typography } from '@material-tailwind/react';
-import safetyFirst from '../assets/images/safetyFirst.png';
 
 const Home = () => {
   const heroGrid = [
     {
       alt: 'image1',
-      src: hero1,
+      src: './assets/images/hero1.jpg',
     },
     {
       alt: 'image2',
-      src: hero2,
+      src: './assets/images/hero2.jpg',
     },
     {
       alt: 'image3',
-      src: hero3,
+      src: './assets/images/hero3.jpg',
     },
   ];
   const [active, setActive] = useState(heroGrid[0]);
@@ -27,7 +23,7 @@ const Home = () => {
     <Section>
       <figure className='relative lg:h-96 h-4/5 w-full px-6 block lg:hidden'>
         <img
-          src={safetyFirst}
+          src='./assets/images/safetyFirst.png'
           alt='safety logo'
           className='absolute -right-2 -top-3 h-40 w-40 lg:right-60 lg:top-4 lg:h-60 lg:w-60 bg-white rounded-full shadow-xl shadow-blue-gray-900/50'
         />
@@ -68,20 +64,20 @@ const Home = () => {
         <figure className='relative'>
           <img
             className='h-full w-full rounded-xl object-contain object-center shadow-xl shadow-blue-gray-900/50'
-            src={hero1}
+            src='./assets/images/hero1.jpg'
             alt='image1'
           />
         </figure>
         <figure className='relative'>
           <img
             className='h-full w-full rounded-xl object-fill object-center shadow-xl shadow-blue-gray-900/50'
-            src={hero3}
+            src='./assets/images/hero1.jpg'
             alt='image2'
           />
         </figure>
       </div>
       <img
-        src={safetyFirst}
+        src='./assets/images/safetyFirst.png'
         alt='safety logo'
         className='absolute -right-2 -top-3 h-40 w-40 lg:right-[37rem] lg:top-1 bg-white rounded-full shadow-xl shadow-blue-gray-900/50 hidden lg:block'
       />
@@ -89,7 +85,7 @@ const Home = () => {
         <Typography
           variant='h5'
           color='blue-gray'
-          className='text-justify text-[10px] md:text-xl lg:text-base'
+          className='text-center text-[10px] md:text-xl lg:text-base'
         >
           At Maitra Solar Solutions, we offer a comprehensive range of solar
           services tailored to meet the needs of private, commercial, and

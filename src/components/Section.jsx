@@ -1,7 +1,6 @@
 import { Typography } from '@material-tailwind/react';
 import React from 'react';
 import { useLocation } from 'react-router-dom';
-import SpeedDialContact from './SpeedDialContact';
 
 const Section = ({ classname, children }) => {
   const { pathname } = useLocation();
@@ -19,7 +18,6 @@ const Section = ({ classname, children }) => {
         className={`${classname || 'px-4 py-4 h-screen font-sans relative'}`}
       >
         {children}
-        {/* <SpeedDialContact className='absolute top-0 left-0' /> */}
       </div>
     </>
   );

@@ -1,21 +1,6 @@
 import React from 'react';
 import Section from '../components/Section';
 
-import service1 from '../assets/images/service1.jpeg';
-import service2 from '../assets/images/service2.jpeg';
-import service3 from '../assets/images/service3.jpeg';
-import service4 from '../assets/images/service4.jpeg';
-import service5 from '../assets/images/service5.jpeg';
-import service6 from '../assets/images/service6.jpeg';
-import service7 from '../assets/images/service7.jpeg';
-import service8 from '../assets/images/service8.jpeg';
-import service9 from '../assets/images/service9.jpg';
-import service10 from '../assets/images/service10.jpeg';
-import service11 from '../assets/images/service11.jpg';
-import service12 from '../assets/images/service12.jpeg';
-import service13 from '../assets/images/service13.jpeg';
-import service14 from '../assets/images/service14.jpeg';
-
 import { Carousel, Typography } from '@material-tailwind/react';
 
 const Services = () => {
@@ -33,26 +18,47 @@ const Services = () => {
         and Maintenance initiation as per contract type.
       </Typography>
 
-      <div className='grid grid-flow-row gap-8 mt-20'>
+      <div className='grid grid-flow-row gap-8 mt-10 md:mt-20'>
         <div className='md:px-10 lg:px-20'>
           <Typography variant='h5' className='mb-8'>
             1. Module cleaning
           </Typography>
 
-          <div className='flex flex-row gap-8 mb-8'>
+          <div className='hidden md:flex flex-row gap-8 mb-8'>
             <img
               className='h-72 w-72 rounded-lg object-cover object-center shadow-xl shadow-blue-gray-900/50'
-              src={service1}
+              src='./assets/images/service1.jpeg'
               alt='service1'
             />
             <img
               className='h-72 w-72 rounded-lg object-cover object-center shadow-xl shadow-blue-gray-900/50'
-              src={service2}
+              src='./assets/images/service2.jpeg'
               alt='service2'
             />
           </div>
 
-          <Typography variant='paragraph' className='text-justify'>
+          <Carousel
+            transition={{ duration: 1 }}
+            autoplay={true}
+            loop={true}
+            className='rounded-xl h-80 w-80 md:hidden mb-8'
+          >
+            <img
+              className='h-80 w-80 rounded-lg object-cover object-center shadow-xl shadow-blue-gray-900/50'
+              src='./assets/images/service1.jpeg'
+              alt='service1'
+            />
+            <img
+              className='h-80 w-80 rounded-lg object-cover object-center shadow-xl shadow-blue-gray-900/50'
+              src='./assets/images/service2.jpeg'
+              alt='service2'
+            />
+          </Carousel>
+
+          <Typography
+            variant='paragraph'
+            className='text-justify text-sm md:text-base'
+          >
             Solar panel cleaning is now a firmly established part of maintaining
             a solar panel array. If you own or maintain a commercial solar panel
             array, you will no doubt be interested in reaping the largest
@@ -81,32 +87,32 @@ const Services = () => {
           <div className='hidden lg:flex flex-row flex-wrap gap-8 mb-8'>
             <img
               className='h-72 w-72 rounded-lg object-cover object-center shadow-xl shadow-blue-gray-900/50'
-              src={service3}
+              src='./assets/images/service3.jpeg'
               alt='service3'
             />
             <img
               className='h-72 w-72 rounded-lg object-cover object-center shadow-xl shadow-blue-gray-900/50'
-              src={service4}
+              src='./assets/images/service4.jpeg'
               alt='service4'
             />
             <img
               className='h-72 w-72 rounded-lg object-cover object-center shadow-xl shadow-blue-gray-900/50'
-              src={service5}
+              src='./assets/images/service5.jpeg'
               alt='service5'
             />
             <img
               className='h-72 w-72 rounded-lg object-cover object-center shadow-xl shadow-blue-gray-900/50'
-              src={service6}
+              src='./assets/images/service6.jpeg'
               alt='service6'
             />
             <img
               className='h-72 w-72 rounded-lg object-cover object-center shadow-xl shadow-blue-gray-900/50'
-              src={service7}
+              src='./assets/images/service7.jpeg'
               alt='service7'
             />
             <img
               className='h-72 w-72 rounded-lg object-cover object-center shadow-xl shadow-blue-gray-900/50'
-              src={service8}
+              src='./assets/images/service8.jpeg'
               alt='service8'
             />
           </div>
@@ -119,91 +125,128 @@ const Services = () => {
           >
             <img
               className='h-80 w-80 rounded-lg object-cover object-center shadow-xl shadow-blue-gray-900/50'
-              src={service3}
+              src='./assets/images/service3.jpeg'
               alt='service3'
             />
             <img
               className='h-80 w-80 rounded-lg object-cover object-center shadow-xl shadow-blue-gray-900/50'
-              src={service4}
+              src='./assets/images/service4.jpeg'
               alt='service4'
             />
             <img
               className='h-80 w-80 rounded-lg object-cover object-center shadow-xl shadow-blue-gray-900/50'
-              src={service5}
+              src='./assets/images/service5.jpeg'
               alt='service5'
             />
             <img
               className='h-80 w-80 rounded-lg object-cover object-center shadow-xl shadow-blue-gray-900/50'
-              src={service6}
+              src='./assets/images/service6.jpeg'
               alt='service6'
             />
             <img
               className='h-80 w-80 rounded-lg object-cover object-center shadow-xl shadow-blue-gray-900/50'
-              src={service7}
+              src='./assets/images/service7.jpeg'
               alt='service7'
             />
             <img
-              className='h-72 w-72 rounded-lg object-cover object-center shadow-xl shadow-blue-gray-900/50'
-              src={service8}
+              className='h-80 w-80 rounded-lg object-cover object-center shadow-xl shadow-blue-gray-900/50'
+              src='./assets/images/service8.jpeg'
               alt='service8'
             />
           </Carousel>
 
-          <Typography variant='paragraph' className='text-justify'>
+          <Typography
+            variant='paragraph'
+            className='text-justify text-sm md:text-base'
+          >
             Solar Maintenance Solar Solutions provides a complete solar array
             testing, servicing and repair service on commercial rooftop and
             residential solar arrays. We can provide you with any or all of the
             following: <br />
             <br />
           </Typography>
-          <div className='flex flex-row justify-start items-start gap-16 pl-4'>
+          <div className='flex flex-col md:flex-row justify-start items-start gap-0 md:gap-16 pl-4'>
             <ul className='list-disc'>
               <li>
-                <Typography variant='paragraph'>
+                <Typography
+                  variant='paragraph'
+                  className='text-xs md:text-sm lg:text-base'
+                >
                   Energy production analysis
                 </Typography>
               </li>
               <li>
-                <Typography variant='paragraph'>String testing</Typography>
+                <Typography
+                  variant='paragraph'
+                  className='text-xs md:text-sm lg:text-base'
+                >
+                  String testing
+                </Typography>
               </li>
               <li>
-                <Typography variant='paragraph'>
+                <Typography
+                  variant='paragraph'
+                  className='text-xs md:text-sm lg:text-base'
+                >
                   Voltage & current check
                 </Typography>
               </li>
               <li>
-                <Typography variant='paragraph'>
+                <Typography
+                  variant='paragraph'
+                  className='text-xs md:text-sm lg:text-base'
+                >
                   AC/DC connector check
                 </Typography>
               </li>
               <li>
-                <Typography variant='paragraph'>Inverter testing</Typography>
+                <Typography
+                  variant='paragraph'
+                  className='text-xs md:text-sm lg:text-base'
+                >
+                  Inverter testing
+                </Typography>
               </li>
             </ul>
             <ul className='list-disc'>
               <li>
-                <Typography variant='paragraph'>
+                <Typography
+                  variant='paragraph'
+                  className='text-xs md:text-sm lg:text-base'
+                >
                   Junction box, isolator, distribution board and wiring
                   inspection
                 </Typography>
               </li>
               <li>
-                <Typography variant='paragraph'>
+                <Typography
+                  variant='paragraph'
+                  className='text-xs md:text-sm lg:text-base'
+                >
                   Visual inspection of entire system for signs of damage
                 </Typography>
               </li>
               <li>
-                <Typography variant='paragraph'>
+                <Typography
+                  variant='paragraph'
+                  className='text-xs md:text-sm lg:text-base'
+                >
                   Test of parameters of system to ensure optimum efficiency
                 </Typography>
               </li>
               <li>
-                <Typography variant='paragraph'>
+                <Typography
+                  variant='paragraph'
+                  className='text-xs md:text-sm lg:text-base'
+                >
                   Roof fixing and roof condition check
                 </Typography>
               </li>
               <li>
-                <Typography variant='paragraph'>
+                <Typography
+                  variant='paragraph'
+                  className='text-xs md:text-sm lg:text-base'
+                >
                   Advice, replacement of faulty parts and repairs, where
                   necessary
                 </Typography>
@@ -218,18 +261,36 @@ const Services = () => {
               3. Reporting
             </Typography>
           </div>
-          <div className='flex flex-row gap-8'>
+          <div className='hidden md:flex flex-row gap-8'>
             <img
               className='h-72 w-80 rounded-lg object-cover object-center shadow-xl shadow-blue-gray-900/50'
-              src={service9}
+              src='./assets/images/service9.jpg'
               alt='service9'
             />
             <img
               className='h-72 w-80 rounded-lg object-cover object-center shadow-xl shadow-blue-gray-900/50'
-              src={service10}
+              src='./assets/images/service10.jpeg'
               alt='service10'
             />
           </div>
+
+          <Carousel
+            transition={{ duration: 1 }}
+            autoplay={true}
+            loop={true}
+            className='rounded-xl h-80 w-80 md:hidden mb-8'
+          >
+            <img
+              className='h-full w-full rounded-lg object-cover object-center shadow-xl shadow-blue-gray-900/50'
+              src='./assets/images/service9.jpg'
+              alt='service9'
+            />
+            <img
+              className='h-full w-full rounded-lg object-cover object-center shadow-xl shadow-blue-gray-900/50'
+              src='./assets/images/service10.jpeg'
+              alt='service10'
+            />
+          </Carousel>
         </div>
 
         <div className='md:px-10 lg:px-20'>
@@ -240,12 +301,15 @@ const Services = () => {
           <div className='flex flex-row gap-2 mb-8'>
             <img
               className='h-72 rounded-lg object-cover object-center shadow-xl shadow-blue-gray-900/50'
-              src={service11}
+              src='./assets/images/service11.jpg'
               alt='service11'
             />
           </div>
 
-          <Typography variant='paragraph' className='text-justify'>
+          <Typography
+            variant='paragraph'
+            className='text-justify text-sm md:text-base'
+          >
             System monitoring is essential for ensuring your solar array is
             running at it’s maximum capacity. Your Return-On-Investment (ROI)
             can be severely dented if you do not know of problems on your array
@@ -272,25 +336,51 @@ const Services = () => {
             5. Inverter communication
           </Typography>
 
-          <div className='flex flex-row gap-8 mb-8'>
+          <div className='hidden lg:flex flex-row gap-8 mb-8'>
             <img
               className='h-80 w-72 rounded-lg object-cover object-center shadow-xl shadow-blue-gray-900/50'
-              src={service12}
+              src='./assets/images/service12.jpeg'
               alt='service12'
             />
             <img
               className='h-80 w-72 rounded-lg object-cover object-center shadow-xl shadow-blue-gray-900/50'
-              src={service13}
+              src='./assets/images/service13.jpeg'
               alt='service13'
             />
             <img
               className='h-80 w-72 rounded-lg object-cover object-bottom shadow-xl shadow-blue-gray-900/50'
-              src={service14}
+              src='./assets/images/service14.jpeg'
               alt='service14'
             />
           </div>
 
-          <Typography variant='paragraph' className='text-justify'>
+          <Carousel
+            transition={{ duration: 1 }}
+            autoplay={true}
+            loop={true}
+            className='rounded-xl h-80 w-80 md:hidden mb-8'
+          >
+            <img
+              className='h-full w-full rounded-lg object-cover object-center shadow-xl shadow-blue-gray-900/50'
+              src='./assets/images/service12.jpeg'
+              alt='service12'
+            />
+            <img
+              className='h-full w-full rounded-lg object-cover object-center shadow-xl shadow-blue-gray-900/50'
+              src='./assets/images/service13.jpeg'
+              alt='service13'
+            />
+            <img
+              className='h-full w-full rounded-lg object-cover object-bottom shadow-xl shadow-blue-gray-900/50'
+              src='./assets/images/service14.jpeg'
+              alt='service14'
+            />
+          </Carousel>
+
+          <Typography
+            variant='paragraph'
+            className='text-justify text-sm md:text-base'
+          >
             <span className='font-semibold'>
               Prevent even minor yield losses:{' '}
             </span>
@@ -331,9 +421,12 @@ const Services = () => {
             system design and energy production. Following are a few defects:
             <br />
           </Typography>
-          <ul className='list-decimal px-16 py-4'>
+          <ul className='list-decimal px-8 md:px-16 py-4'>
             <li>
-              <Typography variant='paragraph'>
+              <Typography
+                variant='paragraph'
+                className='text-justify text-xs md:text-base'
+              >
                 Microcracks: can happen due to vibrations in the panels or
                 mishandling while installation. These are not visible to the
                 naked eyes but can cause serious loss of energy production over
@@ -341,7 +434,10 @@ const Services = () => {
               </Typography>
             </li>
             <li>
-              <Typography variant='paragraph'>
+              <Typography
+                variant='paragraph'
+                className='text-justify text-xs md:text-base'
+              >
                 PID: Potential Induced Degradation happens in the solar
                 crystalline PV panels caused by stray currents and can cause
                 efficiency loss of up to 30%. This defect can also take up to
@@ -349,7 +445,10 @@ const Services = () => {
               </Typography>
             </li>
           </ul>
-          <Typography variant='paragraph' className='text-justify'>
+          <Typography
+            variant='paragraph'
+            className='text-justify text-xs md:text-base'
+          >
             Considering the above points, it is clear that string monitoring is
             an important measure to keep a track of the solar PV system and also
             to identify key issues with the solar PV panels.
